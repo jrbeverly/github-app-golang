@@ -1,0 +1,14 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "aws",
+    srcs = ["s3.go"],
+    importpath = "github.com/jrbeverly/github-app-golang/pkg/aws",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//lib/cobrago",
+        "@com_github_aws_aws_sdk_go_v2//aws",
+        "@com_github_aws_aws_sdk_go_v2_config//:config",
+        "@com_github_aws_aws_sdk_go_v2_service_s3//:s3",
+    ],
+)

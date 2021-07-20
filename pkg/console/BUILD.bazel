@@ -1,0 +1,9 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "console",
+    srcs = ["print.go"],
+    importpath = "github.com/jrbeverly/github-app-golang/pkg/console",
+    visibility = ["//visibility:public"],
+    deps = ["//lib/cobrago"],
+)
