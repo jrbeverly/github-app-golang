@@ -1,0 +1,1 @@
+smee --url ${SMEE_URL} --path /event_handler --port 8080
